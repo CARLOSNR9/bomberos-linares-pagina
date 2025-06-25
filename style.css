@@ -1,0 +1,563 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif; /* Una fuente legible, puedes cambiarla */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Un fondo gris claro para la página */
+}
+
+/* Estilos del Encabezado (Header) */
+.main-header {
+    background-color: #d11a22; /* Un rojo vibrante, típico de bomberos */
+    color: #fff; /* Texto blanco */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+    /* ¡Nuevas propiedades para el Sticky Header! */
+    position: sticky; /* Hace que el elemento se "pegue" cuando alcanza el top */
+    top: 0; /* Se pegará en la parte superior de la ventana */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos al hacer scroll */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding-left: 20px; /* Espacio a la izquierda del logo */
+}
+
+.logo-container img {
+    height: 80px; /* Tamaño del logo */
+    margin-right: 15px; /* Espacio entre el logo y el texto */
+}
+
+.logo-container h1 {
+    margin: 0; /* Asegurarse de que no tenga márgenes predeterminados que lo empujen */
+    font-size: 1.8rem;
+    color: #fff;
+    white-space: nowrap; /* Evita que el texto de h1 se rompa en varias líneas */
+}
+
+.logo-container h2 {
+    margin: 0; /* Asegurarse de que no tenga márgenes predeterminados */
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: normal;
+    display: block; /* Asegura que h2 ocupe su propia línea si flex lo alteró */
+    margin-top: 5px; /* Pequeño margen superior para separarlo de h1 */
+}
+
+/* Estilos de la Navegación */
+.main-nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0 20px; /* Espacio alrededor del menú */
+    display: flex; /* Para que los enlaces estén en línea */
+}
+
+.main-nav ul li {
+    margin-left: 20px; /* Espacio entre cada elemento del menú */
+}
+
+.main-nav ul li a {
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.main-nav ul li a:hover {
+    color: #ffcc00; /* Un amarillo o naranja brillante al pasar el ratón */
+}
+
+/* Estilos para el Hero Section */
+.hero-section {
+    position: relative; /* Contenedor para posicionar imagen y contenido */
+    height: 550px; /* Altura fija para el banner. Se ajustará mejor con JS para móviles */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Color de texto predeterminado para el contenido */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Agregué sombra para que destaque más */
+    margin-bottom: 20px; /* Margen inferior para separarlo de la siguiente sección */
+}
+
+.hero-image {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupará toda la altura del contenedor */
+    object-fit: cover; /* Escala la imagen para cubrir el área, manteniendo proporciones y recortando si es necesario */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    position: absolute; /* Permite posicionarla y que el contenido se superponga */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Estará debajo del overlay y el contenido */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecimiento (negro con 50% de opacidad) */
+    z-index: 2; /* Estará encima de la imagen, debajo del contenido */
+}
+
+.hero-content {
+    position: relative; /* Necesario para que esté por encima del overlay */
+    z-index: 3; /* El contenido estará siempre visible */
+    max-width: 900px; /* Ancho máximo para el texto */
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem; /* Aumentamos un poco el tamaño del título */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* Sombra más pronunciada para mejor legibilidad */
+}
+
+.hero-content p {
+    font-size: 1.6rem; /* Aumentamos el tamaño del párrafo */
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8); /* Sombra para el párrafo */
+}
+
+/* Estilos para el Botón de Llamada a la Acción */
+.btn-call-to-action {
+    display: inline-block;
+    background-color: #ffcc00; /* Un amarillo vibrante */
+    color: #d11a22; /* Texto rojo para contrastar */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.btn-call-to-action:hover {
+    background-color: #e6b800; /* Un amarillo un poco más oscuro al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
+}
+
+/* Estilos para las secciones de contenido general */
+main section {
+    padding: 40px 20px;
+    margin: 20px auto; /* Centra las secciones y les da un margen */
+    max-width: 960px; /* Ancho máximo para el contenido */
+    background-color: #fff;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra para las secciones */
+}
+
+main section h2 {
+    color: #d11a22; /* Color de los títulos de sección */
+    border-bottom: 2px solid #eee; /* Línea debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2.2rem; /* Tamaño de fuente para los títulos de sección */
+}
+
+main section h3 {
+    color: #d11a22; /* Color para los subtítulos de sección */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.6rem; /* Tamaño de fuente para los subtítulos */
+}
+
+main section p {
+    margin-bottom: 15px; /* Espacio debajo de los párrafos para mejorar la lectura */
+    font-size: 1.1rem; /* Tamaño de fuente para los párrafos */
+    line-height: 1.7; /* Interlineado para facilitar la lectura de bloques de texto */
+}
+
+main section ul {
+    list-style: disc; /* Puntos de disco para las listas */
+    margin-left: 25px; /* Sangría a la izquierda para los puntos de la lista */
+    padding-left: 0;
+    margin-bottom: 20px; /* Espacio debajo de la lista */
+}
+
+main section ul li {
+    margin-bottom: 10px; /* Espacio entre cada elemento de la lista */
+    font-size: 1.1rem; /* Tamaño de fuente para los elementos de la lista */
+}
+
+/* Estilos para la Galería de Fotos */
+.gallery-grid {
+    display: grid; /* Usamos CSS Grid para crear la cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre las fotos */
+    margin-top: 30px; /* Espacio superior */
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que la imagen se mantenga dentro de los bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para cada foto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efectos hover */
+    position: relative; /* Para posicionar el caption */
+    display: flex; /* Para centrar la imagen dentro del item si es necesario */
+    flex-direction: column; /* Apilar imagen y caption */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.gallery-item img {
+    width: 100%; /* La imagen ocupa todo el ancho del item */
+    height: 220px; /* Altura fija para todas las imágenes de la galería */
+    object-fit: cover; /* Recorta la imagen para que cubra la altura fija sin distorsionarse */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.gallery-caption {
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f8f8; /* Fondo ligero para el caption */
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-top: 1px solid #eee; /* Línea separadora */
+}
+
+
+/* Estilos del Footer */
+footer {
+    background-color: #222; /* Un gris oscuro casi negro para un buen contraste */
+    color: #f4f4f4; /* Un blanco roto para el texto */
+    text-align: center;
+    padding: 2rem 0; /* Un poco más de padding vertical */
+    margin-top: 40px; /* Margen para separarlo de la última sección */
+    font-size: 0.95rem; /* Ligeramente más grande */
+    border-top: 5px solid #d11a22; /* Una línea roja decorativa en la parte superior */
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    /* Header */
+    .main-header {
+        flex-direction: column; /* Apila el logo y la navegación en pantallas pequeñas */
+        text-align: center;
+    }
+
+  /* Estilos del Encabezado (Header) */
+/* ... (otros estilos de .main-header se mantienen) ... */
+
+/* Estilos del Encabezado (Header) */
+/* ... (otros estilos de .main-header se mantienen, incluyendo sticky header) ... */
+
+.logo-container {
+    display: flex; /* Mantiene el logo (imagen) al lado del texto */
+    align-items: center; /* Alinea verticalmente la imagen y el bloque de texto */
+    padding-left: 20px; /* Espacio a la izquierda del logo */
+}
+
+.logo-container img {
+    height: 80px; /* Tamaño del logo */
+    margin-right: 15px; /* Espacio entre el logo y el bloque de texto */
+    /* Aseguramos que la imagen no tenga un margen inferior indeseado */
+    margin-bottom: 0; 
+}
+
+.logo-text { /* ¡NUEVA REGLA! Estilos para el contenedor de los títulos */
+    display: flex; /* Habilita Flexbox para este nuevo contenedor */
+    flex-direction: column; /* Apila h1 y h2 verticalmente */
+    align-items: flex-start; /* Alinea h1 y h2 a la izquierda dentro de este div */
+}
+
+.logo-text h1 { /* Cambiamos el selector de .logo-container h1 a .logo-text h1 */
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 1.8rem;
+    color: #fff;
+    white-space: nowrap; /* Evita que este título se rompa en varias líneas */
+}
+
+.logo-text h2 { /* Cambiamos el selector de .logo-container h2 a .logo-text h2 */
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: normal;
+    margin-top: 5px; /* Espacio superior para separar de h1 */
+}
+
+/* ... (resto de estilos se mantienen) ... */
+
+/* ... (resto de estilos se mantienen) ... */
+    .main-nav ul {
+        flex-direction: column; /* Apila los enlaces del menú */
+        padding: 0;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0; /* Espacio vertical entre enlaces */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 450px; /* Reducir altura en móviles para ahorrar espacio vertical */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; /* Ajuste para móviles */
+    }
+
+    .hero-content p {
+        font-size: 1.3rem; /* Ajuste para móviles */
+    }
+
+    .btn-call-to-action {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    /* Contenido general */
+    main section {
+        padding: 20px 15px; /* Reducir padding en móviles */
+        margin: 15px auto;
+    }
+
+    main section h2 {
+        font-size: 1.8rem; /* Ajustar tamaño de títulos en móviles */
+    }
+
+    main section h3 {
+        font-size: 1.4rem; /* Ajustar tamaño de subtítulos en móviles */
+    }
+
+    main section p,
+    main section ul li {
+        font-size: 1rem; /* Ajustar tamaño de texto en móviles */
+    }
+
+    /* Galería de Fotos - Ajustes para tablets */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Menos columnas en tablets */
+        gap: 15px;
+    }
+}
+
+/* Nuevo media query para pantallas aún más pequeñas (celulares muy pequeños) */
+@media (max-width: 480px) {
+    .hero-section {
+        height: 400px; /* Más reducción de altura */
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .btn-call-to-action {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Galería de Fotos - Ajustes para móviles */
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles pequeños */
+        gap: 15px;
+    }
+
+    .gallery-item img {
+        height: 200px; /* Altura ligeramente menor en móviles */
+    }
+}
+
+
+/* Estilos para la Sección de Contacto */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Información a la izquierda, formulario a la derecha */
+    gap: 40px; /* Espacio entre las columnas */
+    margin-top: 30px;
+    align-items: start; /* Alinea los elementos al inicio de su contenedor de grid */
+}
+
+.contact-details h3,
+.contact-form-container h3 {
+    color: #d11a22; /* Color rojo para los subtítulos */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-details p a {
+    color: #333; /* Color del texto de enlaces de contacto */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details p a:hover {
+    color: #d11a22; /* Cambia a rojo al pasar el ratón */
+    text-decoration: underline;
+}
+
+/* Estilos del Formulario de Contacto */
+.contact-form {
+    background-color: #f8f8f8; /* Fondo más claro para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05); /* Sombra interna sutil */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Cada etiqueta en su propia línea */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Ocupa casi todo el ancho, dejando espacio para padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Incluye padding y border en el width */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #d11a22; /* Borde rojo al enfocar el campo */
+    outline: none; /* Quita el contorno predeterminado del navegador */
+}
+
+.btn-submit-form {
+    display: inline-block;
+    background-color: #d11a22; /* Botón rojo de enviar */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-submit-form:hover {
+    background-color: #a01319; /* Rojo más oscuro al pasar el ratón */
+}
+
+/* Estilos del Mapa */
+.map-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center; /* Centra el título del mapa */
+}
+
+.map-container h3 {
+    color: #d11a22;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 8px; /* Bordes redondeados para el mapa */
+}
+
+/* Responsive adjustments for Contact Section */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr; /* Una sola columna en tablets y móviles */
+        gap: 30px;
+    }
+}
+
+/* Estilos para la Ventana Modal (Lightbox) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija para cubrir toda la ventana */
+    z-index: 2000; /* Alto z-index para estar siempre encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Permite scroll si la imagen es muy grande */
+    background-color: rgba(0,0,0,0.9); /* Fondo negro semi-transparente */
+    padding-top: 60px; /* Espacio para el botón de cerrar */
+    animation: fadeIn 0.5s; /* Animación de aparición suave */
+}
+
+/* Contenido de la modal (la imagen) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Ancho máximo para la imagen */
+    max-height: 80%; /* Altura máxima para la imagen (ajustada para el padding-top) */
+    object-fit: contain; /* Asegura que la imagen se vea completa sin cortar */
+    animation: zoomIn 0.6s; /* Animación de zoom al aparecer */
+}
+
+/* Descripción (caption) de la imagen modal */
+.modal-caption {
+    margin: 15px auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc; /* Color gris claro para la descripción */
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Botón de cierre */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer; /* Indica que es clickeable */
+    z-index: 2001; /* Asegura que esté por encima de la imagen */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb; /* Color más claro al pasar el ratón */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animaciones para la modal */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.8);}
+    to {transform: scale(1);}
+}
