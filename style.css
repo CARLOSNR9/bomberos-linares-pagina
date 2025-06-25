@@ -12,13 +12,13 @@ body {
 .main-header {
     background-color: #d11a22;
     color: #fff;
-    padding: 1rem 20px;
+    padding: 1rem 20px; /* Padding a los lados */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacio entre logo-container y nav/hamburger */
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* Asegura que no haya salto de línea inesperado en desktop */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: sticky;
+    position: sticky; /* Sticky Header */
     top: 0;
     z-index: 1000;
 }
@@ -34,17 +34,17 @@ body {
     margin-bottom: 0;
 }
 
-.logo-text {
+.logo-text { /* Contenedor para los títulos del logo */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Apila h1 y h2 verticalmente */
+    align-items: flex-start; /* Alinea h1 y h2 a la izquierda dentro de este div */
 }
 
 .logo-text h1 {
     margin: 0;
     font-size: 1.8rem;
     color: #fff;
-    white-space: nowrap;
+    white-space: nowrap; /* Evita que este título se rompa en varias líneas */
 }
 
 .logo-text h2 {
@@ -52,18 +52,18 @@ body {
     font-size: 1.2rem;
     color: #fff;
     font-weight: normal;
-    margin-top: 5px;
+    margin-top: 5px; /* Espacio superior para separar de h1 */
 }
 
-/* Estilos del Botón de Hamburguesa */
+/* Estilos del Botón de Hamburguesa (Desktop: Oculto) */
 .hamburger-menu {
-    display: none;
+    display: none; /* Oculto por defecto en desktop */
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
     color: #fff;
-    z-index: 1001;
+    z-index: 1001; /* Asegura que esté por encima del menú desplegable */
 }
 
 .hamburger-menu span {
@@ -75,6 +75,7 @@ body {
     transition: 0.4s;
 }
 
+/* Animación de la hamburguesa (X) */
 .hamburger-menu.is-active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
@@ -87,7 +88,7 @@ body {
 
 /* Estilos de la Navegación (para Desktop) */
 .main-nav {
-    display: block;
+    display: block; /* Visible por defecto en desktop */
 }
 
 .main-nav ul {
@@ -346,42 +347,68 @@ footer {
 }
 
 
-/* Estilos para la Sección de Contacto (¡CORRECCIONES APLICADAS!) */
+/* Estilos para la Sección de Contacto */
 .contact-info-grid {
-    display: grid; /* Establece el contenedor como una cuadrícula */
-    grid-template-columns: 1fr 2fr; /* Primera columna (info) 1 parte, segunda (formulario) 2 partes */
-    gap: 40px; /* Espacio entre las columnas */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
     margin-top: 30px;
-    align-items: start; /* Alinea los elementos al inicio de su contenedor de grid */
-    /* Añadir un padding interno para que el contenido no toque los bordes del grid */
-    padding: 20px; /* Un poco de padding dentro del grid container */
-    background-color: #fff; /* Asegura un fondo blanco si el grid está fuera de la section */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra ligera */
-    margin-bottom: 30px; /* Espacio antes del mapa */
+    align-items: start;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+#contacto h2, #contacto p {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.contact-details h3,
+.contact-form-container h3 {
+    color: #d11a22;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact-details p a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details p a:hover {
+    color: #d11a22;
+    text-decoration: underline;
 }
 
 /* Estilos del Formulario de Contacto */
-.contact-form-container {
-    /* No se necesita un background-color aquí si ya lo tiene .contact-info-grid */
-    padding: 0; /* Quitamos padding aquí, se maneja en el form-group */
-    border-radius: 0;
-    box-shadow: none; /* Quitamos sombras duplicadas */
-}
-
 .contact-form {
-    background-color: #f8f8f8; /* Fondo más claro para el formulario */
-    padding: 25px; /* Padding interno para el formulario */
+    background-color: #f8f8f8;
+    padding: 25px;
     border-radius: 8px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.05); /* Sombra interna sutil */
-    display: flex; /* Usamos flexbox para el formulario */
-    flex-direction: column; /* Apila los grupos de formulario verticalmente */
-    gap: 15px; /* Espacio entre grupos de formulario */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .form-group {
-    /* margin-bottom ya se maneja con gap en .contact-form */
-    margin-bottom: 0; /* Asegurarse de quitar márgenes conflictivos */
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group label {
@@ -390,30 +417,32 @@ footer {
     font-weight: bold;
     color: #555;
     font-size: 1rem;
-    text-align: left; /* Asegura que la etiqueta esté a la izquierda */
+    text-align: left;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
+.form-group input[type="text"][name="subject"],
 .form-group textarea {
-    width: 100%; /* Ocupa el 100% del ancho disponible */
-    padding: 12px; /* Más padding para hacer los campos más grandes */
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    box-sizing: border-box; /* Incluye padding y border en el width */
+    box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
+.form-group input[type="text"][name="subject"]:focus,
 .form-group textarea:focus {
     border-color: #d11a22;
     outline: none;
 }
 
 .btn-submit-form {
-    display: inline-block; /* O block si quieres que ocupe todo el ancho */
+    display: inline-block;
     background-color: #d11a22;
     color: #fff;
     padding: 12px 25px;
@@ -424,9 +453,8 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    /* Alineación del botón */
-    align-self: flex-start; /* Alinea el botón a la izquierda dentro del flex container */
-    margin-top: 10px; /* Pequeño margen superior para separar del último campo */
+    align-self: flex-start;
+    margin-top: 10px;
 }
 
 .btn-submit-form:hover {
@@ -435,7 +463,7 @@ footer {
 
 /* Estilos del Mapa */
 .map-container {
-    margin-top: 40px; /* Margen superior para separarlo del grid de contacto */
+    margin-top: 40px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -450,12 +478,12 @@ footer {
 }
 
 .map-container iframe {
-    width: 100%; /* El mapa ocupa todo el ancho de su contenedor */
-    max-width: 100%; /* Asegura que no se desborde */
-    height: 450px; /* Altura fija para el mapa */
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
     border-radius: 8px;
-    display: block; /* Elimina posible espacio debajo del iframe */
-    margin: 0 auto; /* Centra el iframe si su ancho es menor que el contenedor */
+    display: block;
+    margin: 0 auto;
 }
 
 /* MEDIA QUERIES para Responsive Design */
@@ -466,24 +494,26 @@ footer {
         justify-content: space-between; 
         align-items: center;
         padding: 1rem 20px;
+        flex-wrap: wrap; /* Permitirá que el nav se envuelva debajo */
     }
 
     .logo-container {
-        padding-left: 0;
-        margin-bottom: 0;
+        /* Los estilos ya están en desktop y son heredados */
     }
 
+    /* Mostrar el botón de hamburguesa en móviles */
     .hamburger-menu {
         display: block;
         position: static; 
         transform: none;
     }
 
+    /* Ocultar la navegación por defecto en móviles y estilizar cuando se abre */
     .main-nav {
-        display: none;
+        display: none; /* Oculta todo el bloque de navegación por defecto */
         width: 100%;
-        flex-basis: 100%;
-        order: 3;
+        flex-basis: 100%; /* ¡CLAVE! Hace que el nav salte a la siguiente "fila" en el flex container */
+        order: 3; /* Asegura que la navegación vaya debajo del logo y la hamburguesa */
         background-color: #c0161c;
         padding: 10px 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -509,8 +539,9 @@ footer {
         display: block;
     }
 
+    /* ESTADO ABIERTO DEL MENÚ */
     .main-nav.nav-open {
-        display: block;
+        display: block; /* Muestra el menú cuando tiene la clase 'nav-open' */
     }
 
     /* Hero Section */
