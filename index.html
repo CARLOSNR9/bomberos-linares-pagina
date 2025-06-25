@@ -8,13 +8,21 @@
 </head>
 <body>
 
-   <header class="main-header">
-       <div class="logo-container">
+    <header class="main-header">
+        <div class="logo-container">
             <img src="img/logo.png" alt="Logo Bomberos Linares">
-            <div class="logo-text"> <h1>Cuerpo de Bomberos Voluntarios</h1>
+            <div class="logo-text">
+                <h1>Cuerpo de Bomberos Voluntarios</h1>
                 <h2>Linares Nariño</h2>
             </div>
         </div>
+        
+        <button class="hamburger-menu" aria-label="Abrir menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav class="main-nav">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -22,6 +30,7 @@
                 <li><a href="#servicios">Nuestros Servicios</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto">Ubicación</a></li>
             </ul>
         </nav>
     </header>
@@ -29,7 +38,8 @@
     <main>
         <section id="inicio" class="hero-section">
             <img src="img/hero-bomberos.jpeg" alt="Bomberos Linares en acción" class="hero-image">
-            <div class="hero-overlay"></div> <div class="hero-content">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
                 <h1>Protegiendo a Linares, Salvando Vidas.</h1>
                 <p>Salvar vidas, estableciendo fundamentos básicos para la prevención, atención y control de incendios, rescates y otros incidentes con materiales peligrosos.</p>
                 <a href="#contacto" class="btn-call-to-action">Contáctanos Ahora</a>
@@ -102,10 +112,10 @@
                     <img src="img/9.jpeg" alt="Vehículo de emergencia.">
                     <div class="gallery-caption">Vehículo de emergencia.</div>
                 </div>
-                </div>
+            </div>
         </section>
 
-       <section id="contacto">
+        <section id="contacto">
             <h2>Contacto</h2>
             <p>Si tienes alguna pregunta, necesitas información sobre nuestros servicios o deseas reportar una emergencia, no dudes en contactarnos. Estamos aquí para servir a la comunidad de Linares Nariño.</p>
 
@@ -115,7 +125,7 @@
                     <p><i class="icon-email"></i> E-Mail: <a href="mailto:bomberosvlinares@gmail.com">bomberosvlinares@gmail.com</a></p>
                     <p><i class="icon-phone"></i> Celular 1: <a href="tel:+573183390339">3183390339</a></p>
                     <p><i class="icon-phone"></i> Celular 2: <a href="tel:+573104082508">3104082508</a></p>
-                    </div>
+                </div>
 
                 <div class="contact-form-container">
                     <h3>Envíanos un Mensaje</h3>
@@ -143,16 +153,20 @@
 
             <div class="map-container">
                 <h3>Nuestra Ubicación</h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.2943389630237!2d-77.52480112986922!3d1.350879841094716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ec7c9ad2d6feb%3A0x6ece5732f825aa06!2sCOLISEO%20MUNICIPAL!5e0!3m2!1ses!2sco!4v1750817516769!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.2943389630237!2d-77.52480112986922!3d1.350879841094716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ec7c9ad2d6feb%3A0x6ece5732f825aa06!2sCOLISEO%20MUNICIPAL!5e0!3m2!1ses!2sco!4v1750817516769!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Cuerpo de Bomberos Voluntarios Linares Nariño. Todos los derechos reservados.</p>
+        <p>© 2025 Cuerpo de Bomberos Voluntarios Linares Nariño. Todos los derechos reservados.</p>
     </footer>
 
-  <div id="imageModal" class="modal">
-        <span class="close-button">&times;</span> <img class="modal-content" id="img01"> <div id="caption" class="modal-caption"></div> </div>
+    <div id="imageModal" class="modal">
+        <span class="close-button">×</span>
+        <img class="modal-content" id="img01">
+        <div id="caption" class="modal-caption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
