@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuerpo de Bomberos Voluntarios Linares Nariño</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,11 +32,10 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Acerca de Nosotros</a></li>
-                <li><a href="#servicios">Nuestros Servicios</a></li>
+                <li><a href="#gestion">Gestión y Transparencia</a></li> <!-- Nueva Sección -->
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#contacto">Ubicación</a></li>
             </ul>
         </nav>
     </header>
@@ -38,132 +43,154 @@
     <main>
         <section id="inicio" class="hero-section">
             <img src="img/hero-bomberos.jpeg" alt="Bomberos Linares en acción" class="hero-image">
-            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Protegiendo a Linares, Salvando Vidas.</h1>
-                <p>Salvar vidas, estableciendo fundamentos básicos para la prevención, atención y control de incendios, rescates y otros incidentes con materiales peligrosos.</p>
-                <a href="#contacto" class="btn-call-to-action">Contáctanos Ahora</a>
+                <p>Honor, Abnegación y Disciplina al servicio de nuestra comunidad.</p>
+                <a href="#contacto" class="btn-call-to-action">Emergencias: 318 339 0339</a>
             </div>
         </section>
 
         <section id="nosotros">
-            <h2>Acerca de Nosotros</h2>
-            <p>El Cuerpo de Bomberos Voluntarios de Linares Nariño fue creado el 14 de Agosto de 2014.</p>
-            <p>Contamos con nueve (9) unidades.</p>
-            <p>Nuestro NIT es 900.814.209-0.</p>
-            <p>La Personería Jurídica es la No. 0099 del 10/08/2014.</p>
-            <p>Nuestro Comandante es el Bombero Sandro Ruben Alvear Eraso.</p>
-            <h3>Misión</h3>
-            <p>Salvar vidas, estableciendo fundamentos básicos para la prevención, atención y control de incendios, rescates y otros incidentes con materiales peligrosos.</p>
-            <h3>Visión</h3>
-            <p>Nuestra propuesta de servicio comunitario, se enfoca en llegar a ser una gran entidad de socorro, capaz de cubrir todas las necesidades que nuestra población pueda llegar a tener.</p>
+            <h2>Nuestra Misión</h2>
+            <p>Desde el 14 de Agosto de 2014, el Cuerpo de Bomberos Voluntarios de Linares Nariño ha estado dedicado a salvaguardar la vida y bienes de nuestra comunidad. Con un equipo profesional y comprometido, trabajamos incansablemente en la prevención y atención de emergencias.</p>
+        </section>
+
+        <!-- Nueva Sección de Transparencia -->
+        <section id="gestion">
+            <h2>Gestión y Transparencia</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Comprometidos con la honestidad y el acceso a la información pública, ponemos a disposición de la ciudadanía nuestros informes de gestión y planificación anual.</p>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="doc-info">
+                        <h3>Gestión 2025</h3>
+                        <p>Informe detallado de Rendición de Cuentas y Gestión realizada durante el año 2025.</p>
+                        <a href="docs/Rendicion_Cuentas_Gestion_2025.pdf" target="_blank" class="btn-download">
+                            <i class="fa-solid fa-download"></i> Descargar PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="doc-info">
+                        <h3>Plan de Acción 2026</h3>
+                        <p>Hoja de ruta y estrategias operativas proyectadas para el fortalecimiento institucional.</p>
+                        <a href="docs/Plan_Accion_Bomberos_2026.pdf" target="_blank" class="btn-download">
+                            <i class="fa-solid fa-download"></i> Descargar PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="servicios">
-            <h2>Nuestros Servicios a la Comunidad</h2>
+            <h2>Nuestros Servicios</h2>
             <ul>
-                <li>Inspecciones de seguridad.</li>
-                <li>Capacitaciones en primeros auxilios (OBACE, RCP, manejo de heridas y fracturas).</li>
-                <li>Capacitaciones sobre manejo de emergencias (creación de planes de emergencia, evacuación y traslado de pacientes).</li>
-                <li>Manejo y uso de extintores.</li>
-                <li>Manejo de incendios forestales.</li>
+                <li>
+                    <i class="fa-solid fa-clipboard-check" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h4>Inspecciones de Seguridad</h4>
+                    <p>Evaluación técnica de establecimientos para prevención de riesgos.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-kit-medical" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h4>Primeros Auxilios</h4>
+                    <p>Capacitación en RCP, manejo de heridas y atención prehospitalaria básica.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-people-group" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h4>Capacitaciones</h4>
+                    <p>Formación a empresas y comunidad en planes de emergencia y evacuación.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-fire-extinguisher" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h4>Manejo de Extintores</h4>
+                    <p>Uso correcto de equipos de extinción para control de conatos de incendio.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-tree" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h4>Incendios Forestales</h4>
+                    <p>Prevención y control especializado de fuego en cobertura vegetal.</p>
+                </li>
             </ul>
-            <p>Todos estos servicios son realizados por el bombero SANDRO ALVEAR, Instructor de la Dirección Nacional de Bomberos Colombia, con número de registro: 086-2023.</p>
         </section>
 
         <section id="galeria">
-            <h2>Galería de Fotos</h2>
-            <p>Aquí podrás ver algunas de nuestras acciones, capacitaciones y el trabajo diario del Cuerpo de Bomberos Voluntarios de Linares Nariño.</p>
-
+            <h2>Galería Institucional</h2>
             <div class="gallery-grid">
+                <!-- Items de galería con clases actualizadas -->
                 <div class="gallery-item">
-                    <img src="img/1.jpeg" alt="Acción de rescate en entrenamiento.">
-                    <div class="gallery-caption">Acción de rescate en entrenamiento.</div>
+                    <img src="img/1.jpeg" alt="Entrenamiento de rescate">
+                    <div class="gallery-caption">Entrenamiento de Rescate</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/2.jpeg" alt="Capacitación en primeros auxilios.">
-                    <div class="gallery-caption">Capacitación en primeros auxilios.</div>
+                    <img src="img/2.jpeg" alt="Capacitación primeros auxilios">
+                    <div class="gallery-caption">Primeros Auxilios</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="img/3.jpeg" alt="Manejo de equipos de extinción.">
-                    <div class="gallery-caption">Manejo de equipos de extinción.</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/4.jpeg" alt="Simulacro de evacuación.">
-                    <div class="gallery-caption">Simulacro de evacuación.</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/5.jpeg" alt="Incendio forestal controlado.">
-                    <div class="gallery-caption">Incendio forestal controlado.</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/6.jpeg" alt="Asistencia comunitaria.">
-                    <div class="gallery-caption">Asistencia comunitaria.</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/7.jpeg" alt="Preparación de equipos.">
-                    <div class="gallery-caption">Preparación de equipos.</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/8.jpeg" alt="Formación del personal.">
-                    <div class="gallery-caption">Formación del personal.</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img/9.jpeg" alt="Vehículo de emergencia.">
-                    <div class="gallery-caption">Vehículo de emergencia.</div>
-                </div>
+                <!-- Se mantienen las imágenes existentes pero con mejor estructura -->
+                <div class="gallery-item"><img src="img/3.jpeg" alt="Equipos"><div class="gallery-caption">Manejo de Equipos</div></div>
+                <div class="gallery-item"><img src="img/4.jpeg" alt="Simulacro"><div class="gallery-caption">Simulacros de Evacuación</div></div>
+                <div class="gallery-item"><img src="img/5.jpeg" alt="Incendio"><div class="gallery-caption">Control de Incendios</div></div>
+                <div class="gallery-item"><img src="img/6.jpeg" alt="Comunidad"><div class="gallery-caption">Apoyo a la Comunidad</div></div>
+                <div class="gallery-item"><img src="img/7.jpeg" alt="Preparación"><div class="gallery-caption">Alistamiento</div></div>
+                <div class="gallery-item"><img src="img/8.jpeg" alt="Formación"><div class="gallery-caption">Formación Constante</div></div>
+                <div class="gallery-item"><img src="img/9.jpeg" alt="Vehículos"><div class="gallery-caption">Parque Automotor</div></div>
             </div>
         </section>
 
         <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Si tienes alguna pregunta, necesitas información sobre nuestros servicios o deseas reportar una emergencia, no dudes en contactarnos. Estamos aquí para servir a la comunidad de Linares Nariño.</p>
-
-            <div class="contact-info-grid">
-                <div class="contact-details">
-                    <h3>Información de Contacto Directo</h3>
-                    <p><i class="icon-email"></i> E-Mail: <a href="mailto:bomberosvlinares@gmail.com">bomberosvlinares@gmail.com</a></p>
-                    <p><i class="icon-phone"></i> Celular 1: <a href="tel:+573183390339">3183390339</a></p>
-                    <p><i class="icon-phone"></i> Celular 2: <a href="tel:+573104082508">3104082508</a></p>
+            <h2>Contáctanos</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información Directa</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>bomberosvlinares@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>318 339 0339</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>310 408 2508</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Linares, Nariño - Colombia</span>
+                    </div>
                 </div>
 
-                <div class="contact-form-container">
-                    <h3>Envíanos un Mensaje</h3>
+                <div class="contact-form-wrapper">
                     <form action="#" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nombre Completo:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Asunto:</label>
-                            <input type="text" id="subject" name="subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Tu Mensaje:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit-form">Enviar Mensaje</button>
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                        
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                        
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                        
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
 
-            <div class="map-container">
-                <h3>Nuestra Ubicación</h3>
+            <div class="map-responsive">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.2943389630237!2d-77.52480112986922!3d1.350879841094716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ec7c9ad2d6feb%3A0x6ece5732f825aa06!2sCOLISEO%20MUNICIPAL!5e0!3m2!1ses!2sco!4v1750817516769!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Cuerpo de Bomberos Voluntarios Linares Nariño. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Cuerpo de Bomberos Voluntarios Linares Nariño. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Modal para imágenes (Lightbox) -->
     <div id="imageModal" class="modal">
-        <span class="close-button">×</span>
+        <span class="close-button">&times;</span>
         <img class="modal-content" id="img01">
         <div id="caption" class="modal-caption"></div>
     </div>
